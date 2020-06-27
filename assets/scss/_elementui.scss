@@ -1,0 +1,39 @@
+.el-menu--horizontal>.el-menu-item.is-active{
+    border-color: $color-brand;
+}
+
+.el-menu-item.is-active{
+    border-bottom: 2px solid #409EFF !important;
+    border-bottom-color: #00529B !important;
+}
+.nuxt-link-exact-active{
+    background-color: transparent !important;
+    color: $color-brand !important;
+    font-weight: 700;
+    border-color: #00529B;
+}
+
+/* Tabs (media) */ 
+.media{
+    .el-tabs__nav-wrap{
+        &::after{
+            content: none;
+        }
+        .el-tabs__item{
+            text-transform: uppercase;
+            color: $color-text;
+            font-size: 0.9375rem;
+            &.is-active{
+                color: $color-brand;
+                font-weight: 700;
+            }
+        }
+        .el-tabs__nav{
+            text-align: center;
+            float: none;
+            .el-tabs__active-bar{
+                display: none;
+            }
+        }
+    }
+}

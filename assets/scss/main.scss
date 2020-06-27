@@ -1,0 +1,278 @@
+@import './_variables.scss';
+@import './_elementui.scss';
+
+div.outer-wrapper{
+    max-width: $outer-wrapper;
+    margin: 0 auto;
+}
+
+div.inner-wrapper{
+    max-width: $inner-wrapper;
+    margin: 0 auto;
+}
+
+.section-wrapper{
+    display: grid;
+    grid-template-columns: auto $inner-wrapper auto;
+    column-gap: $elements-spacing/2;
+    @media screen and (max-width: $inner-wrapper) {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        padding: 0 $side-padding;
+    }
+    .section-content{
+        grid-column: 2;
+    }
+}
+
+.with-padding{
+    padding: $section-spacing 0;
+    @media screen and (max-width: $inner-wrapper) {
+        padding: $section-spacing $side-padding;
+    }
+    @media screen and (max-width: $media-mobile) {
+        padding: $section-spacing $side-padding/2;
+    }
+    &.menu-padding{
+        padding: ($section-spacing+$menu-height) 0 $section-spacing;
+        @media screen and (max-width: $content-wrapper) {
+            padding: (60px+$menu-height-mobile) 0 60px;
+        }
+    }
+}
+
+div.content-wrapper{
+    /*max-width: $content-wrapper;
+    margin: 0 auto;
+    @media screen and (max-width: $content-wrapper) {
+        padding: 0 $side-padding;
+    }
+    @media screen and (max-width: $media-mobile) {
+        padding: 0 $side-padding-mobile;
+    }*/
+}
+
+/*h1{
+    font-size: 3.75rem; //60px
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: $font-headlines;
+    color: $color-headlines;
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top:($font-primary-capital-letter - 1.5) * 0.5em;
+    }
+    &::after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-bottom:($font-primary-capital-letter - 1.5) * 0.5em;
+    }
+    @media screen and (max-width: $media-mobile) {
+        font-size: 34px;
+        line-height: 51px;
+    }
+}*/
+h2{
+    font-size: 3rem; //48px
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: $font-headlines-alt;
+    color: $color-headlines;
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top:($font-primary-capital-letter - 1.5) * 0.5em;
+    }
+    &::after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top:($font-primary-capital-letter - 1.5) * 0.5em;
+    }
+    @media screen and (max-width: $media-mobile) {
+        //font-size: 30px;
+        //line-height: 1.5;
+    }
+}
+h3{
+    font-size: 2.625rem; //42px
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: $font-headlines;
+    color: $color-headlines;
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top:($font-primary-capital-letter - 1.2) * 0.5em;
+    }
+    @media screen and (max-width: $media-mobile) {
+        //font-size: 30px;
+        //line-height: 1.5;
+    }
+}
+h4{
+    font-size: 2rem; //32px
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: $font-headlines-alt;
+    color: $color-text;
+    @media screen and (max-width: $media-mobile) {
+        //font-size: 1.5rem; //24px
+    }
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top:($font-primary-capital-letter - 1.5) * 0.5em;
+    }
+    &::after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-bottom:($font-primary-capital-letter - 1.5) * 0.5em;
+    }
+}
+h5{
+    font-size: 1.75rem; //28px
+    font-weight: 600;
+    line-height: 1.35;
+    font-family: $font-headlines;
+    color: $color-headlines;
+    &::after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-bottom:($font-primary-capital-letter - 1.35) * 0.5em;
+    }
+    @media screen and (max-width: $media-mobile) {
+        font-size: 1.25rem; //20px
+    }
+}
+h6{
+    font-size: 0.625rem; //10px
+    font-weight: 300;
+    line-height: 1.5;
+    color: $color-text;
+    font-family: $font-headlines;
+    &.big{
+        font-size: 2.25rem;
+        line-height: 1.39;
+    }
+}
+p{
+    font-size: 1.125rem; //18px
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: $font-paragraphs;
+    color: $color-text;
+    &.hint{
+        font-size: 0.9375rem; //15px
+        font-weight: 300;
+    }
+}
+ul{
+    margin-top: $elements-spacing/2;
+    padding-left: 20px;
+    color: $color-brand;   
+}
+
+.white{
+    color: $color-white;
+}
+
+.btn{
+    a{
+        display: inline-block;
+        color: $color-white;
+        /*height: 46px;*/
+        font-size: 1.125rem; //18px
+        font-weight: 600;
+        line-height: normal; //1.5 in design
+        font-family: $font-headlines;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 18px 60px;
+        background-color: $color-brand;
+        &:hover{
+                background-color: $color-brand-dark;
+        }
+    }
+    &.outline a{
+        background-color: transparent;
+        border: 2px solid $color-brand;
+        color: $color-brand;
+    }
+}
+
+
+.hide-mobile{
+    @media screen and (max-width: $media-mobile) {
+        display: none !important;
+    }       
+}
+.show-mobile{
+    display: none !important;
+    @media screen and (max-width: $media-mobile) {
+        display: block !important;
+    }
+}
+
+.neutral-bg{
+    background-color: $bg-neutral;
+}
+
+.fullscreen-bg{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    //-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: 500px;
+    //background-color: #FFFFFF; /* Just for now*/
+    @media screen and (max-width: $media-desktop) {
+        background-attachment: initial;
+    }
+    @media screen and (max-width: $media-tablet) {
+        //height: 100%;
+    }
+}
+
+.divider{
+    background-color: #2A74B7;
+    width: 100%;
+    height: 2px;
+}
+.heading-line{
+    width: 100%;
+    height: 1px;
+    background-color: #99B9D7;
+    position: relative;
+    top: 15px;
+    @media screen and (max-width: $inner-wrapper) {
+        display: none;
+    }
+    i{
+        position: absolute;
+        right: -7px;
+        top: -7.5px;
+    }
+}

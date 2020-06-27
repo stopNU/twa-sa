@@ -1,0 +1,45 @@
+$media-xsmall: 500px; /* max widths */
+$media-mobile: 767px; /* max widths */
+$media-tablet: 1024px; /* max widths */
+$media-tablet-xl: 1200px; /* max widths */
+$media-desktop: 1440px; /* max widths */
+$media-desktop-xl: 1680px;
+
+$outer-wrapper: 1920px;
+$inner-wrapper: 1440px;
+$content-wrapper: 1200px;
+
+//$inner-wrapper-padding: 120px;
+$side-padding: 30px;
+$side-padding-mobile: 15px;
+
+$section-spacing: 80px; 
+$elements-spacing: 60px; 
+
+$menu-height: 78px;
+$menu-height-mobile: 60px;
+
+
+/* 
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+*/
+
+
+$font-headlines: 'Source Sans Pro', sans-serif;
+$font-headlines-alt: 'Roboto Condensed', sans-serif;
+$font-paragraphs: 'Source Sans Pro', sans-serif;
+$font-paragraphs-alt: 'Segoe UI', sans-serif;
+$font-primary-capital-letter: 0.75;
+
+$color-text: #363636;
+$color-text-hint: #363636;
+$color-brand: #00529B;
+$color-brand-dark: #0C429B;
+$color-headlines: #00529B;
+$color-white: #ffffff;
+$color-error: #FF5757;
+
+$bg-brand: #00529B;
+$bg-neutral: #F3F3F3;
