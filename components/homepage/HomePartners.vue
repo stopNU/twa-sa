@@ -234,12 +234,31 @@ export default {
             height: 300px;
             margin-left: auto;
             margin-right: auto;
-
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+            z-index: 1;
+            .swiper-wrapper{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                display: flex;
+                transition-property: transform;
+                box-sizing: content-box;
+            }
             .swiper-slide {
-            height: 134px;
+                flex-shrink: 0;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transition-property: transform;
+                height: 134px;
             }
         }
     }
+
     h2{
         margin-bottom: $elements-spacing;
     }

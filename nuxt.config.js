@@ -31,6 +31,7 @@ export default {
   */
   css: [
     'element-ui/lib/theme-chalk/index.css',
+    'swiper/swiper-bundle.css',
     '@/assets/scss/main.scss',
   ],
   styleResources: {
