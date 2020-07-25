@@ -1,7 +1,7 @@
 <template>
-    <div class="section-wrapper neutral-bg with-padding">
+    <div class="section-wrapper with-padding">
         <div>
-            <div class="heading-line"><i class="el-icon-help"></i></div>
+            <div class="heading-line"><img src="~/assets/icons/twa-icon-headline-circle.png" alt="circle icon"></div>
         </div>
         <div class="section-content">
             <div class="quality">

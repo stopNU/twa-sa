@@ -13,7 +13,7 @@ div.inner-wrapper{
 
 .section-wrapper{
     display: grid;
-    grid-template-columns: auto $inner-wrapper auto;
+    grid-template-columns: 1fr $inner-wrapper 1fr;
     column-gap: $elements-spacing/2;
     @media screen and (max-width: $inner-wrapper) {
         grid-template-columns: 1fr;
@@ -182,6 +182,11 @@ p{
         font-size: 0.9375rem; //15px
         font-weight: 300;
     }
+    &.quote{
+        font-size: 1.5rem; //15px
+        font-style: italic;
+        font-weight: 500;
+    }
 }
 ul{
     margin-top: $elements-spacing/2;
@@ -194,6 +199,8 @@ ul{
 }
 
 .btn{
+    text-decoration: none;
+    font-size: 1.125rem; //18px
     a{
         display: inline-block;
         color: $color-white;
@@ -209,6 +216,11 @@ ul{
         &:hover{
                 background-color: $color-brand-dark;
         }
+    }
+    span{
+        font-size: 20px;
+        line-height: 1;
+        margin-left: 5px;
     }
     &.outline a{
         background-color: transparent;
@@ -270,9 +282,27 @@ ul{
     @media screen and (max-width: $inner-wrapper) {
         display: none;
     }
-    i{
+    img{
         position: absolute;
         right: -7px;
-        top: -7.5px;
+        top: -10px;
+    }
+}
+
+.with-arrow{
+    display: flex;
+    .arrow{
+        background-color: #99B9D7;
+        width: 50px;
+        i{
+            align-items: flex-end;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: 17px;
+            color: $color-brand;
+            font-size: 24px;
+        }
     }
 }

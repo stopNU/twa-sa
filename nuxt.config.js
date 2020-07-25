@@ -30,7 +30,8 @@ export default {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/scss/main.scss',
   ],
   styleResources: {
     scss: [
@@ -43,7 +44,7 @@ export default {
   */
   plugins: [
     '@/plugins/element-ui',
-    '@/assets/scss/main.scss'
+    { src: '@/plugins/vue-awesome-swiper', mode: 'client' }
   ],
   /*
   ** Auto import components

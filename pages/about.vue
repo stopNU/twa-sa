@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <AboutHeader />
-    <AboutContent />
+    <LazyAboutContent />
   </div>
 </template>
 

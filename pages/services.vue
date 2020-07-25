@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <ServicesHeader />
-    <ServicesSectors />
+    <LazyServicesSectors class="services-sectors" />
   </div>
 </template>
 
@@ -12,5 +12,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+  .services-sectors{
+    margin-top: -$section-spacing*2;
+  }
 </style>

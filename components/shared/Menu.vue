@@ -88,6 +88,9 @@
         text-decoration: none;
         display: block;
         height: $menu-height;
+        &:hover{
+          color: $color-brand;
+        }
       }
     }
     .el-menu--horizontal .el-menu-item:not(.is-disabled):hover{

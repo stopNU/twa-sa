@@ -1,7 +1,7 @@
 <template>
     <div class="section-wrapper">
         <div class="white-bg">
-            <div class="heading-line"><i class="el-icon-help"></i></div>
+            <div class="heading-line"><img src="~/assets/icons/twa-icon-headline-circle.png" alt="circle icon"></div>
         </div>
         <div class="section-content">
             <div class="info">

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <ContactHeader />
-    <ContactInfo />
+    <LazyContactInfo />
   </div>
 </template>
 

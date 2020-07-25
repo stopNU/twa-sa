@@ -1,8 +1,10 @@
 <template>
   <div class="container">
     <HomeHeader />
-    <HomeSectors />
-    <HomePartners />
+    <LazyHomeQuote />
+    <LazyHomeSectors />
+    <LazyHomeGlobalPresence />
+    <LazyHomePartners />
   </div>
 </template>
 
