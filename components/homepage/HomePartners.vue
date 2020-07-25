@@ -10,40 +10,199 @@
             
             
             <div class="partners">
-                <div v-swiper="swiperOption">
+                <div v-swiper="swiperOption" class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img class="" alt="Logo 511"
                                 srcset="
-                                    ~/assets/logos/partner-logos/Logo-511.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-511@2x.png 2x,
                                     ~/assets/logos/partner-logos/Logo-511.png 1x"
                                 src="~/assets/logos/partner-logos/Logo-511.png">
                         </div>
                         <div class="swiper-slide">
-                            <img class="" src="~/assets/logos/partner-logos/Logo-Aero-Sense.png" alt="Logo Aero Sense"> 
+                            <img class="" alt="Logo Aero Sense"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Aero-Sense@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Aero-Sense.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Aero-Sense.png">
                         </div>
                         <div class="swiper-slide">
-                            <img class="" src="~/assets/logos/partner-logos/Logo-Aeroshell.png" alt="Logo Aeroshell">
+                            <img class="" alt="Logo Aeroshell"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Aeroshell@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Aeroshell.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Aeroshell.png">
                         </div>
                         <div class="swiper-slide">
-                            <img class="" src="~/assets/logos/partner-logos/Logo-AH.png" alt="Logo Aero Sense"> 
+                            <img class="" alt="Logo AH"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-AH@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-AH.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-AH.png">
                         </div>
-                    </div>
-                </div>
-                <!--<img class="" alt="Logo 511"
-                    srcset="
-                        ~/assets/logos/partner-logos/logo-511.jpg 2x,
-                        ~/assets/logos/partner-logos/logo-511.jpg 1x"
-                    src="~/assets/logos/partner-logos/logo-511.jpg">
-                <img class="" src="~/assets/logos/partner-logos/logo-aero-sense.jpg" alt="Logo Aero Sense">
-                <img class="" src="~/assets/logos/partner-logos/logo-aeroshell.jpg" alt="Logo Aeroshell">
-                <img class="" src="~/assets/logos/partner-logos/logo-ah.jpg" alt="Logo AH">
-                <img class="" src="~/assets/logos/partner-logos/logo-barry-controls.jpg" alt="Logo Barry Controls">
-                <img class="" src="~/assets/logos/partner-logos/logo-bombardier.jpg" alt="Logo Bombadier">
-                <img class="" src="~/assets/logos/partner-logos/logo-bose.jpg" alt="Logo Bose">
-                <img class="" src="~/assets/logos/partner-logos/logo-capewell.jpg" alt="Logo Capewell">
-                <img class="" src="~/assets/logos/partner-logos/logo-cobra-systems.jpg" alt="Logo Cobra Systems">-->
-            </div>
+                        
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Barry Controls"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Barry-Controls@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Barry-Controls.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Barry-Controls.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Bombardier"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Bombardier@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Bombardier.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Bombardier.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Bose"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Bose@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Bose.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Bose.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Capewell"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Capewell@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Capewell.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Capewell.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Cobra Systems"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Cobra-Systems@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Cobra-Systems.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Cobra-Systems.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Donaldson"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Donaldson@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Donaldson.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Donaldson.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Eaton"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Eaton@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Eaton.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Eaton.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Enersys"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Enersys@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Enersys.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Enersys.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Garmin"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Garmin@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Garmin.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Garmin.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Heico"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Heico@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Heico.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Heico.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Honeywell"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Honeywell@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Honeywell.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Honeywell.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Laversab"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Laversab@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Laversab.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Laversab.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Loctite"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Loctite@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Loctite.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Loctite.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Microb Monitor"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Microb-Monitor@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Microb-Monitor.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Microb-Monitor.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Moog"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Moog@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Moog.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Moog.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Rockwell Collins"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Rockwell-Collins@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Rockwell-Collins.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Rockwell-Collins.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Safran"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Safran@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Safran.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Safran.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Stomil"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Stomil@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Stomil.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Stomil.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Thommen"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Thommen@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Thommen.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Thommen.png">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="" alt="Logo Tronair"
+                                srcset="
+                                    ~/assets/logos/partner-logos/Logo-Tronair@2x.png 2x,
+                                    ~/assets/logos/partner-logos/Logo-Tronair.png 1x"
+                                src="~/assets/logos/partner-logos/Logo-Tronair.png">
+                        </div>
+                    </div><!-- .swiper-wrapper -->
+                </div><!-- options -->
+            </div><!-- .partners -->
         </div>
     </div>
 </template>
@@ -53,14 +212,14 @@ export default {
     data() {
         return {
             swiperOption: {
-                loop: true,
                 slidesPerView: 6,
-                loopedSlides: 1,
-                spaceBetween: 100,
-                breakpoints: {
-                    1024: {
-                    }
+                slidesPerColumn: 2,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
                 }
+        
             },
         }
     }
@@ -70,12 +229,15 @@ export default {
 <style scoped lang="scss">
     .partners{
         margin-top: $elements-spacing;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
-        column-gap: $elements-spacing/2;
-        row-gap: $elements-spacing/2;
-        img{
-            width: 100%;
+        cursor: e-resize;
+        .swiper {
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .swiper-slide {
+            height: 134px;
+            }
         }
     }
     h2{
