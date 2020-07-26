@@ -26,6 +26,11 @@ export default {
             max-width: 900px;
             position: relative;
             top: 240px;
+            @media screen and (max-width: $media-mobile) {
+                padding: $elements-spacing/2;
+                max-width: 345px;
+                top: 180px;
+            }
             h3{
                 max-width: 600px;
             }

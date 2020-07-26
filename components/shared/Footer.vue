@@ -38,6 +38,9 @@
         background-color: $bg-brand;
         .inner-wrapper{
             padding: $elements-spacing 0 $elements-spacing/2;
+            @media screen and (max-width: $media-mobile) {
+                padding: $elements-spacing/2 $side-padding/2;
+            }
         }
     }
     .copyright{
@@ -52,8 +55,14 @@
     .logo-part{
         text-align: center;
         margin-bottom: 80px;
+        @media screen and (max-width: $media-mobile) {
+            margin-bottom: 30px;
+        }
         img{
             margin-bottom: $elements-spacing/2;
+            @media screen and (max-width: $media-mobile) {
+                width: 250px;
+            }
         }
         p{
             max-width: 230px;

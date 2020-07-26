@@ -47,27 +47,59 @@ export default {
      .section-wrapper{
         padding-top: 215px;
         grid-template-columns: 1fr $inner-wrapper/2 $inner-wrapper/2 1fr;
+        @media screen and (max-width: $inner-wrapper+$side-padding*2) {
+            grid-template-columns: $side-padding 1fr 1fr $side-padding;
+        }
+        @media screen and (max-width: $media-tablet) {
+            row-gap: $elements-spacing/2;
+            padding-top: $section-spacing*2;
+        }
+        @media screen and (max-width: $media-mobile) {
+            grid-template-columns: $side-padding/2 1fr $side-padding/2;
+            padding-top: $section-spacing;
+        }
     }
     .section-content{
         &.image{
             grid-column: 3 / span 2;
+            @media screen and (max-width: $media-tablet) {
+                grid-column: 1 / span 4;
+                grid-row: 3;
+            }
         }
         &.text{
             grid-column: 2;
             padding-right: 120px;
+            @media screen and (max-width: $media-tablet) {
+                grid-column: 2 / span 2;
+                padding-right: $side-padding;
+            }
+            @media screen and (max-width: $media-mobile) {
+                padding-right: $side-padding/2;
+            }
         }
         .heading{
             margin-bottom: $elements-spacing;
+            @media screen and (max-width: $media-mobile) {
+                margin-bottom: 0;
+            }
         }
         .image-wrapper{
+            margin-left: 15px;
             img{
                 width: 100%;
+                @media screen and (max-width: $media-mobile) {
+                    max-height: 300px;
+                }
             }
         }
         .info{
             >p{
                 margin: 0 0 $elements-spacing/2;
             }
+        }
+        ul{
+            padding-bottom: $elements-spacing/2;
         }
     }
 </style>

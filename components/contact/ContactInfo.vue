@@ -33,7 +33,7 @@
                 form
             </div>
         </div>
-        <div class="neutral-bg"></div>
+        <div class="neutral-bg hide-mobile"></div>
     </div>
 </template>
 
@@ -50,7 +50,7 @@ export default {
             display: grid;
             grid-template-columns: 2fr 4fr;
             @media screen and (max-width: $media-mobile) {
-                //font-size: 1.5rem; //24px
+                grid-template-columns: 1fr;
             }
         }
     }
@@ -58,12 +58,21 @@ export default {
         background-color: $color-white;
         .heading-line{
             margin-left: -$side-padding;
+            @media screen and (max-width: $inner-wrapper+$side-padding*2) {
+                margin-left: 0;
+            }
         }
     }
     .info{
         padding-bottom: $section-spacing;
+        @media screen and (max-width: $media-mobile) {
+            padding-bottom: 0;
+        }
         h2{
             margin-bottom: $elements-spacing;
+            @media screen and (max-width: $media-mobile) {
+                margin-bottom: $elements-spacing/2;
+            }
         }
         .info-box{
             h5{
@@ -81,9 +90,16 @@ export default {
     .form{
         background-color: $bg-neutral;
         padding: $section-spacing $side-padding $section-spacing $section-spacing;
-
+        @media screen and (max-width: $media-mobile) {
+            background-color: transparent;
+            padding: $elements-spacing/2 0;
+        }
     }
     .white-bg, .info{
         padding-top: $section-spacing;
+        @media screen and (max-width: $media-mobile) {
+            padding-top: $elements-spacing/2;
+        }
     }
+    
 </style>

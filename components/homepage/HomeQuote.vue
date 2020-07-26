@@ -26,12 +26,15 @@ export default {
 <style scoped lang="scss">
     .section-wrapper{
         column-gap: 0px;   
+        @media screen and (max-width: $media-tablet) {
+            background-color: $color-white;
+        }
         .white-container{
             background-color: $color-white;
         }
     }
     .quote-section{
-        //grid-column: span 2;
+        
         .quote-wrapper{
             width: fit-content;
             background-color: $color-white;
@@ -40,9 +43,15 @@ export default {
             align-items: flex-start;
             position: relative;
             z-index: 2;
+            @media screen and (max-width: $media-tablet) {
+                padding: $section-spacing 0;
+            }
             .quote{
                 max-width: 750px;
                 margin-bottom: 50px;
+                @media screen and (max-width: $media-tablet) {
+                    max-width: none;
+                }
             }
             .btn{
                 text-decoration: none;

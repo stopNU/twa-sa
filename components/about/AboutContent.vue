@@ -53,13 +53,26 @@ export default {
     .section-content{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: $elements-spacing*2;     
+        column-gap: $elements-spacing*2;
+        row-gap: $elements-spacing;
+        @media screen and (max-width: $media-tablet) {
+            column-gap: $elements-spacing;
+        }
+        @media screen and (max-width: $media-mobile) {
+            grid-template-columns: 1fr;
+        }
         .quality h2{
             margin-bottom: $elements-spacing;
+            @media screen and (max-width: $media-mobile) {
+                margin-bottom: $elements-spacing/2;
+            }
         }
         h4{
             margin-top: $elements-spacing;
             margin-bottom: $elements-spacing/2;
+            @media screen and (max-width: $media-mobile) {
+                margin-top: $elements-spacing/2;
+            }
         }
     }
 </style>

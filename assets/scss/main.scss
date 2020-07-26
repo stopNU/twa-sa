@@ -15,10 +15,13 @@ div.inner-wrapper{
     display: grid;
     grid-template-columns: 1fr $inner-wrapper 1fr;
     column-gap: $elements-spacing/2;
-    @media screen and (max-width: $inner-wrapper) {
-        grid-template-columns: 1fr;
+    @media screen and (max-width: $inner-wrapper+$side-padding*2) {
+        grid-template-columns: $side-padding 1fr $side-padding;
         column-gap: 0;
-        padding: 0 $side-padding;
+    }
+    @media screen and (max-width: $media-mobile) {
+        grid-template-columns: $side-padding/2 1fr $side-padding/2;
+        column-gap: 0;
     }
     .section-content{
         grid-column: 2;
@@ -27,11 +30,8 @@ div.inner-wrapper{
 
 .with-padding{
     padding: $section-spacing 0;
-    @media screen and (max-width: $inner-wrapper) {
-        padding: $section-spacing $side-padding;
-    }
     @media screen and (max-width: $media-mobile) {
-        padding: $section-spacing $side-padding/2;
+        padding: $section-spacing/2 0;
     }
     &.menu-padding{
         padding: ($section-spacing+$menu-height) 0 $section-spacing;
@@ -41,42 +41,6 @@ div.inner-wrapper{
     }
 }
 
-div.content-wrapper{
-    /*max-width: $content-wrapper;
-    margin: 0 auto;
-    @media screen and (max-width: $content-wrapper) {
-        padding: 0 $side-padding;
-    }
-    @media screen and (max-width: $media-mobile) {
-        padding: 0 $side-padding-mobile;
-    }*/
-}
-
-/*h1{
-    font-size: 3.75rem; //60px
-    font-weight: 400;
-    line-height: 1.5;
-    font-family: $font-headlines;
-    color: $color-headlines;
-    &::before {
-        content: '';
-        display: block;
-        height: 0;
-        width: 0;
-        margin-top:($font-primary-capital-letter - 1.5) * 0.5em;
-    }
-    &::after {
-        content: '';
-        display: block;
-        height: 0;
-        width: 0;
-        margin-bottom:($font-primary-capital-letter - 1.5) * 0.5em;
-    }
-    @media screen and (max-width: $media-mobile) {
-        font-size: 34px;
-        line-height: 51px;
-    }
-}*/
 h2{
     font-size: 3rem; //48px
     font-weight: 400;
@@ -98,8 +62,7 @@ h2{
         margin-top:($font-primary-capital-letter - 1.5) * 0.5em;
     }
     @media screen and (max-width: $media-mobile) {
-        //font-size: 30px;
-        //line-height: 1.5;
+        font-size: 1.5rem;
     }
 }
 h3{
@@ -116,8 +79,8 @@ h3{
         margin-top:($font-primary-capital-letter - 1.2) * 0.5em;
     }
     @media screen and (max-width: $media-mobile) {
-        //font-size: 30px;
-        //line-height: 1.5;
+        font-size: 1.625rem;
+        line-height: 1.5;
     }
 }
 h4{
@@ -127,7 +90,7 @@ h4{
     font-family: $font-headlines-alt;
     color: $color-text;
     @media screen and (max-width: $media-mobile) {
-        //font-size: 1.5rem; //24px
+        font-size: 1.375rem; //24px
     }
     &::before {
         content: '';
@@ -170,6 +133,9 @@ h6{
     &.big{
         font-size: 2.25rem;
         line-height: 1.39;
+        @media screen and (max-width: $media-mobile) {
+            font-size: 1.25rem;
+        }
     }
 }
 p{
@@ -178,6 +144,9 @@ p{
     line-height: 1.5;
     font-family: $font-paragraphs;
     color: $color-text;
+    @media screen and (max-width: $media-mobile) {
+        font-size: 1rem;
+    }
     &.hint{
         font-size: 0.9375rem; //15px
         font-weight: 300;
@@ -229,7 +198,11 @@ ul{
     }
 }
 
-
+.hide-tablet{
+    @media screen and (max-width: $media-tablet) {
+        display: none !important;
+    }       
+}
 .hide-mobile{
     @media screen and (max-width: $media-mobile) {
         display: none !important;
@@ -279,21 +252,35 @@ ul{
     background-color: #99B9D7;
     position: relative;
     top: 15px;
-    @media screen and (max-width: $inner-wrapper) {
-        display: none;
-    }
     img{
         position: absolute;
         right: -7px;
         top: -10px;
     }
+    @media screen and (max-width: $inner-wrapper+$side-padding*2) {
+        width: 25px;
+        img{
+            width: 18px;
+            right: -6px;
+            top: -8px;
+        }
+    }
+    @media screen and (max-width: $media-mobile) {
+        display: none;
+    }
 }
 
 .with-arrow{
+    position: relative;
     display: flex;
     .arrow{
+        position: absolute;
         background-color: #99B9D7;
         width: 50px;
+        height: 100%;
+        @media screen and (max-width: $media-tablet) {
+            width: 30px;
+        }
         i{
             align-items: flex-end;
             height: 100%;
@@ -303,6 +290,10 @@ ul{
             bottom: 17px;
             color: $color-brand;
             font-size: 24px;
+            @media screen and (max-width: $media-tablet) {
+                font-size: 16px;
+                bottom: 10px;
+            }
         }
     }
 }

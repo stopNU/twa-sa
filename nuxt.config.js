@@ -31,7 +31,7 @@ export default {
   */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    'swiper/swiper-bundle.css',
+    'vue-slick-carousel/dist/vue-slick-carousel.css',
     '@/assets/scss/main.scss',
   ],
   styleResources: {
@@ -45,7 +45,7 @@ export default {
   */
   plugins: [
     '@/plugins/element-ui',
-    { src: '@/plugins/vue-awesome-swiper', mode: 'client' }
+    { src: './plugins/vue-slick-carousel.js' }
   ],
   /*
   ** Auto import components

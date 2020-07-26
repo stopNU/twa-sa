@@ -10,9 +10,8 @@
             
             
             <div class="partners">
-                <div v-swiper="swiperOption" class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                <VueSlickCarousel v-bind="slickOptions">
+                    <div class="swiper-slide">
                             <img class="" alt="Logo 511"
                                 srcset="
                                     ~/assets/logos/partner-logos/Logo-511@2x.png 2x,
@@ -200,63 +199,79 @@
                                     ~/assets/logos/partner-logos/Logo-Tronair.png 1x"
                                 src="~/assets/logos/partner-logos/Logo-Tronair.png">
                         </div>
-                    </div><!-- .swiper-wrapper -->
-                </div><!-- options -->
+                </VueSlickCarousel>                   
             </div><!-- .partners -->
         </div>
     </div>
 </template>
 
 <script>
+
 export default {
     data() {
         return {
-            swiperOption: {
-                slidesPerView: 6,
-                slidesPerColumn: 2,
-                spaceBetween: 30,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true
-                }
-        
-            },
+            slickOptions: {
+                "infinite": true,
+                "slidesToShow": 6,
+                "speed": 500,
+                "rows": 2,
+                "slidesPerRow": 1,
+                "arrows": false,
+                "autoplay": true,
+                "responsive": [
+                    {
+                    "breakpoint": 1024,
+                    "settings": {
+                        "slidesToShow": 3,
+                        "infinite": true
+                    }
+                    },
+                    {
+                    "breakpoint": 600,
+                    "settings": {
+                        "slidesToShow": 2,
+                    }
+                    },
+                    {
+                    "breakpoint": 480,
+                    "settings": {
+                        "slidesToShow": 1,
+                    }
+                    }
+                ]
+            }
         }
     }
 }
 </script>
 
 <style scoped lang="scss">
+    .section-wrapper{
+          
+    }
     .partners{
-        margin-top: $elements-spacing;
-        cursor: e-resize;
-        .swiper {
-            height: 300px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            overflow: hidden;
-            list-style: none;
-            padding: 0;
-            z-index: 1;
-            .swiper-wrapper{
-                position: relative;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-                display: flex;
-                transition-property: transform;
-                box-sizing: content-box;
-            }
-            .swiper-slide {
-                flex-shrink: 0;
-                width: 100%;
-                height: 100%;
-                position: relative;
-                transition-property: transform;
-                height: 134px;
-            }
+        margin: $elements-spacing auto 0 auto;
+        @media screen and (max-width: $inner-wrapper+$side-padding*2) {
+            width: 1120px;
+        }    
+        @media screen and (max-width: $media-tablet-xl) {
+            width: 1000px;
         }
+        @media screen and (max-width: $media-tablet) {
+            width: 750px;
+        }
+        @media screen and (max-width: $media-mobile) {
+            width: 500px;
+        }
+        @media screen and (max-width: $media-xsmall) {
+            width: 300px;
+        }
+        cursor: e-resize;
+        .swiper-slide{
+            margin-bottom: $elements-spacing/2;
+        }
+      
+   
     }
 
     h2{

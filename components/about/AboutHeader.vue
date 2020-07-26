@@ -30,8 +30,15 @@ export default {
     .title{
         font-size: 2.25rem;
         margin: $section-spacing 0 $elements-spacing/2;
+        @media screen and (max-width: $media-tablet) {
+            margin: $section-spacing/2 0 $elements-spacing/2;
+        }
+        @media screen and (max-width: $media-mobile) {
+            font-size: 1.25rem;
+            margin: $section-spacing/4 0 $elements-spacing/4;
+        }
     }
-    .image-wrapper{
+    .image-wrapper{ 
         img{
             width: 100%;
         }

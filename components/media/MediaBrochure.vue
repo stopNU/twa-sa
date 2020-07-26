@@ -54,8 +54,22 @@ export default {
         padding-top: 0px;
     }
     .brochure{
+        @media screen and (max-width: $media-mobile) {
+            text-align: center;
+        }
         img{
             margin: 20px 0 50px;
+            @media screen and (max-width: $media-mobile) {
+                margin: 30px 0;
+                max-height: 300px;
+            }
+        }
+        h6{
+            @media screen and (max-width: $media-mobile) {
+                text-align: center;
+                font-size: 1.375rem;
+                font-family: $font-headlines-alt;
+            }
         }
     }
 </style>

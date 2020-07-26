@@ -87,21 +87,39 @@ export default {
         column-gap: $elements-spacing/2;
         row-gap: $elements-spacing/2;
         margin-top: $elements-spacing;
+        @media screen and (max-width: $media-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: $media-mobile) {
+            margin-top: $elements-spacing/2;
+        }
+        @media screen and (max-width: 650px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
         .sector{
             box-shadow: 0px 3px 6px #00000029;
             background-color: $color-white;
             img{
                 width: 100%;
                 height: 325px;
+                @media screen and (max-width: $media-mobile) {
+                    height: 275px;
+                }
             }
             div{
                 display: flex;
                 align-items: center;
                 height: 220px;
+                @media screen and (max-width: $media-mobile) {
+                    height: 85px;
+                }
                 h5{
                     max-width: 280px;
                     margin: 0 auto;
                     text-align: center;
+                    @media screen and (max-width: $media-mobile) {
+                        font-size: 0.9375rem;
+                    }
                 }
             }
             &:hover{
@@ -115,5 +133,8 @@ export default {
     h6{
         max-width: 580px;
         margin-bottom: 75px;
+        @media screen and (max-width: $media-mobile) {
+            margin-bottom: $elements-spacing/2;
+        }
     }
 </style>
