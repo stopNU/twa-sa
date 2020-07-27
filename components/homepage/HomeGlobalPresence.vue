@@ -3,11 +3,13 @@
         <div class="section-content">
             <div class="image-wrapper">
                 <div class="image">
-                    <img alt="Helicopter"
-                        srcset="
-                            ~/assets/images/home/transworld-plane@2x.png 2x,
-                            ~/assets/images/home/transworld-plane.png 1x"
-                        src="~/assets/images/home/transworld-plane.png">
+                    <picture>
+                        <source media="(min-width: 767px)"
+                            srcset="~/assets/images/home/transworld-plane@2x.png 2x,
+                            ~/assets/images/home/transworld-plane.png 1x" />
+                        <source srcset="~/assets/images/home/transworld-plane-mob.jpg" />
+                        <img src="~/assets/images/home/transworld-plane.png" alt="Plane" />
+                    </picture>
                 </div>
                 <h6>Transworld Aviation – We achieve lasting, long-term relationships through quality, world-class service, accuracy and ethics.</h6>
             </div>
@@ -17,14 +19,15 @@
                 <div class="content">
                     <h2>Global Presence</h2>
                     <p>TWA has established a presence in key international and regional aviation hubs through a network of liaison offices that are manned by highly qualified personnel in supply chain management. This allows us to support our customers where they operate, provide them with on time deliveries and cost effective options to meet their operational objectives, and create value to enhance their operational excellence.</p>
-                    <img alt="Helicopter"
-                        srcset="
-                            ~/assets/images/home/transworld-map@2x.png 2x,
-                            ~/assets/images/home/transworld-map.png 1x"
-                        src="~/assets/images/home/transworld-map.png">
+                    <picture>
+                        <source media="(min-width: 767px)"
+                            srcset="~/assets/images/home/transworld-map@2x.png 2x,
+                                ~/assets/images/home/transworld-map.png 1x" />
+                        <source srcset="~/assets/images/home/transworld-map-mob.png" />
+                        <img src="~/assets/images/home/transworld-map.png" alt="Map of TransWorld locations" />
+                    </picture>
                 </div>
             </div>
-            
         </div>
     </div>
 </template>
@@ -65,13 +68,16 @@ export default {
         }
         @media screen and (max-width: $media-tablet) {
             padding-top: $section-spacing;
+            grid-template-columns: 1fr;
         }
         @media screen and (max-width: $media-mobile) {
-            grid-template-columns: 1fr;
             padding-top: $section-spacing/2;
         }
         .heading-line{
             width: 80%;
+            @media screen and (max-width: $media-tablet) {
+                display: none;
+            }
         }
         .content{
             p{
@@ -96,6 +102,9 @@ export default {
         .image{
             margin-top: -$section-spacing;
             img{
+                @media screen and (max-width: $media-tablet) {
+                    margin-top: $elements-spacing;
+                }
                 @media screen and (max-width: $media-mobile) {
                     width: 100%;
                 }

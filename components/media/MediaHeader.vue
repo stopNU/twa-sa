@@ -1,15 +1,37 @@
 <template>
     <div class="section-wrapper with-padding">
-        <div class="section-content">
-            <h6 class="big">Corporate Video</h6>
-            <iframe class="twavid" src="https://www.youtube.com/embed/h1DPuqCJUcg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <div class="section-content media">
+            <el-tabs v-model="activeName" tab-position="bottom">
+                <el-tab-pane label="English" name="en">
+                    <div class="video">
+                        <h6 class="big">Corporate Video</h6>
+                        <iframe class="twavid" src="https://www.youtube.com/embed/h1DPuqCJUcg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                </el-tab-pane>
+                <el-tab-pane label="Arabic" name="ar">
+                    <div class="video">
+                        <h6 class="big">Corporate Video</h6>
+                        <iframe class="twavid" src="https://www.youtube.com/embed/0O_zgPfAFUM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                </el-tab-pane>
+                <el-tab-pane label="French" name="fr">
+                    <div class="video">
+                        <h6 class="big">Corporate Video</h6>
+                        <iframe class="twavid" src="https://www.youtube.com/embed/73qvW2J44yU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                </el-tab-pane>
+            </el-tabs>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-
+    data() {
+      return {
+        activeName: 'en'
+      };
+    },
 }
 </script>
 

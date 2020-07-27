@@ -221,22 +221,30 @@ export default {
                 "responsive": [
                     {
                     "breakpoint": 1024,
-                    "settings": {
-                        "slidesToShow": 3,
-                        "infinite": true
-                    }
+                        "settings": {
+                            "slidesToShow": 3,
+                            "infinite": true
+                        }
                     },
                     {
-                    "breakpoint": 600,
-                    "settings": {
-                        "slidesToShow": 2,
-                    }
+                    "breakpoint": 767,
+                        "settings": {
+                            "slidesToShow": 3,
+                        }
                     },
                     {
-                    "breakpoint": 480,
-                    "settings": {
-                        "slidesToShow": 1,
-                    }
+                    "breakpoint": 650,
+                        "settings": {
+                            "slidesToShow": 2,
+                            "centerMode": true
+                        }
+                    },
+                    {
+                    "breakpoint": 500,
+                        "settings": {
+                            "slidesToShow": 1,
+                            "centerMode": true
+                        }
                     }
                 ]
             }
@@ -261,14 +269,27 @@ export default {
             width: 750px;
         }
         @media screen and (max-width: $media-mobile) {
-            width: 500px;
+            width: 600px;
+        }
+        @media screen and (max-width: 600px) {
+            width:480px;
         }
         @media screen and (max-width: $media-xsmall) {
+            width: 400px;
+        }
+        @media screen and (max-width: 420px) {
             width: 300px;
         }
         cursor: e-resize;
         .swiper-slide{
             margin-bottom: $elements-spacing/2;
+            &:focus{
+                outline: none;
+            }
+            padding-right: 10px;
+            img{
+                    width: 100%;
+            }
         }
       
    

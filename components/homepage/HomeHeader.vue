@@ -16,7 +16,15 @@ export default {
 
 <style scoped lang="scss">
     .fullscreen-bg{
-        background-image: url('~@/assets/images/home/transworld-hero.jpg');
+        background-image: url('~@/assets/images/home/transworld-hero.png');
+        background-image: 
+            image-set(
+                url('~@/assets/images/home/transworld-hero.png') 1x,
+                url('~@/assets/images/home/transworld-hero@2x.png') 2x,
+            );
+        @media screen and (max-width: $media-mobile) {
+            background-image: url('~@/assets/images/home/transworld-hero-mob.jpg');
+        }
     }
     .outer-wrapper{
         height: 100%;

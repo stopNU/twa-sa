@@ -15,11 +15,13 @@
                     <nuxt-link to="/services" class="btn"><p>MRO SERVICES</p> <span>🢒</span></nuxt-link>
                 </div>
             </div>
-            <img class="image" alt="Helicopter"
-                    srcset="
-                        ~/assets/images/home/transworld-helicopter@2x.png 2x,
-                        ~/assets/images/home/transworld-helicopter.png 1x"
-                    src="~/assets/images/home/transworld-helicopter.png">
+            <picture>
+                <source media="(min-width: 767px)"
+                    srcset="/assets/images/home/transworld-helicopter@2x.png 2x,
+                        ~/assets/images/home/transworld-helicopter.png 1x" />
+                <source srcset="~/assets/images/home/transworld-helicopter-mob.jpg" />
+                <img src="~/assets/images/home/transworld-helicopter.png" class="image" alt="Helicopter" />
+            </picture>
         </div>
     </div>
 </template>
@@ -50,6 +52,7 @@ export default {
             grid-template-areas: 
             'image'
             'sectors';
+            padding-bottom: $elements-spacing;
         }
         .image{
             grid-area: image;
