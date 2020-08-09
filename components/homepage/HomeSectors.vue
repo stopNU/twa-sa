@@ -7,17 +7,17 @@
             <div class="text">
                 <h2>Sectors We Operate In</h2>
                 <div class="buttons">
-                    <nuxt-link to="/services" class="btn"><p>CIVIL & COMMERCIAL AVIATION</p> <span>🢒</span></nuxt-link>
-                    <nuxt-link to="/services" class="btn"><p>BUSINESS & CORPORATE AVIATION</p> <span>🢒</span></nuxt-link>
-                    <nuxt-link to="/services" class="btn"><p>GENERAL AVIATION</p> <span>🢒</span></nuxt-link>
-                    <nuxt-link to="/services" class="btn"><p>MILITARY AVIATION</p> <span>🢒</span></nuxt-link>
-                    <nuxt-link to="/services" class="btn"><p>HELICOPTERS & ROTORCRAFTS</p> <span>🢒</span></nuxt-link>
-                    <nuxt-link to="/services" class="btn"><p>MRO SERVICES</p> <span>🢒</span></nuxt-link>
+                    <nuxt-link to="/services" class="btn"><p>CIVIL & COMMERCIAL AVIATION</p> <i class="el-icon-caret-right"></i></nuxt-link>
+                    <nuxt-link to="/services" class="btn"><p>BUSINESS & CORPORATE AVIATION</p> <i class="el-icon-caret-right"></i></nuxt-link>
+                    <nuxt-link to="/services" class="btn"><p>GENERAL AVIATION</p> <i class="el-icon-caret-right"></i></nuxt-link>
+                    <nuxt-link to="/services" class="btn"><p>MILITARY AVIATION</p> <i class="el-icon-caret-right"></i></nuxt-link>
+                    <nuxt-link to="/services" class="btn"><p>HELICOPTERS & ROTORCRAFTS</p> <i class="el-icon-caret-right"></i></nuxt-link>
+                    <nuxt-link to="/services" class="btn"><p>MRO SERVICES</p> <i class="el-icon-caret-right"></i></nuxt-link>
                 </div>
             </div>
             <picture>
                 <source media="(min-width: 767px)"
-                    srcset="/assets/images/home/transworld-helicopter@2x.png 2x,
+                    srcset="~/assets/images/home/transworld-helicopter@2x.png 2x,
                         ~/assets/images/home/transworld-helicopter.png 1x" />
                 <source srcset="~/assets/images/home/transworld-helicopter-mob.jpg" />
                 <img src="~/assets/images/home/transworld-helicopter.png" class="image" alt="Helicopter" />
@@ -109,12 +109,16 @@ export default {
                         }
                     }
                     &:hover{
-                        border-bottom: 2px solid #E82E25;
+                        border-bottom: 2px solid $color-brand;
                         padding-bottom: ($elements-spacing/2)-1;
+                        i{
+                            color: $color-brand;
+                        }
                     }
-                    span{
+                    i{
                         float: right;
-                        color: #E82E25;
+                        color: #B0B0B3;
+                        font-size: 12px;
                     }
                 }
             }

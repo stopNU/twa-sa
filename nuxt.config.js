@@ -45,7 +45,8 @@ export default {
   */
   plugins: [
     '@/plugins/element-ui',
-    { src: './plugins/vue-slick-carousel.js' }
+    { src: './plugins/vue-slick-carousel.js' },
+    "~/plugins/vee-validate.js"
   ],
   /*
   ** Auto import components
@@ -56,6 +57,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    
   ],
   /*
   ** Nuxt.js modules
@@ -64,6 +66,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    'vue-scrollto/nuxt',
   ],
   /*
   ** Axios module configuration
@@ -75,6 +78,6 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-    transpile: [/^element-ui/],
+    transpile: [/^element-ui/, "vee-validate/dist/rules"],
   }
 }

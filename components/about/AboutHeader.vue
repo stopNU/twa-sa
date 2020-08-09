@@ -2,13 +2,14 @@
     <div class="section-wrapper with-padding">
         <div class="section-content">
             <h6 class="title">At Transworld Aviation we are committed to quality.</h6>
-            <div class="image-wrapper with-arrow">
-                <div class="arrow"><i class="el-icon-caret-bottom"></i></div>
-                <img class="" alt="Commercial airplane in the air"
-                    srcset="
-                        ~/assets/images/about/transworld-plane-clouds.jpg 2x,
-                        ~/assets/images/about/transworld-plane-clouds.jpg 1x"
-                    src="~/assets/images/about/transworld-plane-clouds.jpg">
+            <div class="image-wrapper">
+                <picture>
+                    <source media="(min-width: 767px)"
+                        srcset="~/assets/images/about/transworld-plane-clouds@2x.png 2x,
+                                ~/assets/images/about/transworld-plane-clouds.png 1x" />
+                    <source srcset="~/assets/images/about/transworld-plane-clouds-mob.jpg" />
+                    <img src="~/assets/images/about/transworld-plane-clouds.png" alt="Commercial airplane in the air" />
+                </picture>
             </div>
         </div>
     </div>

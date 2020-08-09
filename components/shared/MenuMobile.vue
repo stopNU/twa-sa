@@ -100,7 +100,7 @@
         top: 20px;
         left: $side-padding-mobile;
         img{
-            max-width: 70px;
+            max-width: 100px;
         }
     }
     .menu-mobile{

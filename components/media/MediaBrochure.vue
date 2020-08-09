@@ -3,7 +3,14 @@
         <div class="section-content media">
             <div class="brochure">
                 <h6 class="big">Company Brochure</h6>
-                <img src="~/assets/images/media/brochures/transworld-company-brochure.png" alt="Brochure">
+                <picture>
+                    <source media="(min-width: 767px)"
+                        srcset="
+                            ~/assets/images/media/brochures/transworld-company-brochure@2x.png 2x,
+                            ~/assets/images/media/brochures/transworld-company-brochure.png 1x" />
+                    <source srcset="~/assets/images/media/brochures/transworld-company-brochure-mob.png" />
+                    <img src="~/assets/images/media/brochures/transworld-company-brochure.png" alt="Brochure" />
+                </picture>
                 <div class="btn outline">
                     <a target="blank" href="/twabrochure.pdf">SEE BROCHURE</a>
                 </div>

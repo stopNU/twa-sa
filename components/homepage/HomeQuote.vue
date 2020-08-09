@@ -10,7 +10,7 @@
                     src="~/assets/icons/twa-icon-quote.png">
                 <div>
                     <p class="quote">We at Transworld Aviation provide customised technical solutions, parts distribution, MRO services, supply chain management and consultancy services for our military and commercial customers, minimising their investments in assets and maximising their operational readiness. Together we work to exceed customers’ expectations.</p>
-                    <nuxt-link to="/about" class="btn">About Us <span>🢒</span></nuxt-link>
+                    <nuxt-link to="/about" class="btn">About Us <i class="el-icon-caret-right"></i></nuxt-link>
                 </div>
             </div>
         </div>
@@ -58,6 +58,10 @@ export default {
                 text-transform: uppercase;
                 font-family: 'Open Sans';
                 color: $color-headlines;
+                i{
+                    font-size: 12px;
+                    vertical-align: middle;
+                }
             }
             .icon{
                 padding-right: $elements-spacing/2;

@@ -113,6 +113,13 @@ h5{
     line-height: 1.35;
     font-family: $font-headlines;
     color: $color-headlines;
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-bottom:($font-primary-capital-letter - 1.35) * 0.5em;
+    }
     &::after {
         content: '';
         display: block;
@@ -167,6 +174,38 @@ ul{
     color: $color-white;
 }
 
+button.btn{
+    display: inline-block;
+    color: $color-white;
+    /*height: 46px;*/
+    font-size: 1.125rem; //18px
+    font-weight: 600;
+    line-height: normal; //1.5 in design
+    font-family: $font-headlines;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 18px 60px;
+    background-color: $color-brand;
+    cursor: pointer;
+    
+    &:hover{
+            background-color: $color-brand-dark;
+    }
+    &.outline{
+        background-color: transparent;
+        border: 2px solid $color-brand;
+        color: $color-brand;
+    }
+    &:disabled{
+        border-color: #D1D2D5;
+        color: #D1D2D5;
+        cursor: default;
+    }
+}
+
+a{
+    &:focus {outline:none!important;}
+}
 .btn{
     text-decoration: none;
     font-size: 1.125rem; //18px
@@ -185,6 +224,7 @@ ul{
         &:hover{
                 background-color: $color-brand-dark;
         }
+        
     }
     span{
         font-size: 20px;

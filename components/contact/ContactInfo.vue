@@ -29,8 +29,8 @@
                     </p>
                 </div>
             </div>
-            <div class="form">
-                form
+            <div class="form-wrapper">
+                <ContactForm />
             </div>
         </div>
         <div class="neutral-bg hide-mobile"></div>
@@ -87,7 +87,7 @@ export default {
             }
         }
     }
-    .form{
+    .form-wrapper{
         background-color: $bg-neutral;
         padding: $section-spacing $side-padding $section-spacing $section-spacing;
         @media screen and (max-width: $media-mobile) {
