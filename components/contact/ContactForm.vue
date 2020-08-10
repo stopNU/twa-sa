@@ -135,7 +135,7 @@ export default {
             params.append('country', this.form.country)
             this.$axios
                 .$post(
-                    "http://twa.stillcreativ.com/mail.php",
+                    "https://twa-sa.com/mail.php",
                     params,
                     {
                         headers: {
