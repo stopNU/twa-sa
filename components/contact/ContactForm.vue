@@ -118,11 +118,11 @@ export default {
     }),
     methods: {
         openCenter() {
-        this.$message({
-          message: 'Centered text',
-          center: true
-        });
-      },
+            this.$message({
+                message: 'Centered text',
+                center: true
+            });
+        },
         formSubmit(e) {
             e.preventDefault()
 
@@ -143,13 +143,21 @@ export default {
                         }
                     })
                 .then(res => {
-                    this.$message.success('Form successfully send!');
+                    this.$message.success('Form successfully send!')
+                    thie.clearInputs()
                 })
                 .catch(error => {
                     console.log(error.response.data.error)
-                    this.$message.error('Error sending - Please use info@twa-sa.com instead.');
-                });
-            
+                    this.$message.error('Error sending - Please use info@twa-sa.com instead.')
+                });   
+        },
+        clearInputs(){
+            this.form.name = '';
+            this.form.email = '';
+            this.form.message = '';
+            this.form.phone = '';
+            this.form.company = '';
+            this.form.country = '';
         }
     }
 }

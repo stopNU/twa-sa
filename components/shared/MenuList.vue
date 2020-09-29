@@ -15,9 +15,9 @@
         <el-menu-item index="/services" :class="{'is-active': onRoutes === '/services'}" @click="handleClicked">
             <nuxt-link :to="{ path: '/services' }">Services</nuxt-link>
         </el-menu-item>
-        <el-menu-item index="/media" :class="{'is-active': onRoutes === '/media'}" @click="handleClicked">
+        <!--<el-menu-item index="/media" :class="{'is-active': onRoutes === '/media'}" @click="handleClicked">
             <nuxt-link :to="{ path: '/media' }">Media</nuxt-link>
-        </el-menu-item>
+        </el-menu-item>-->
         <el-menu-item index="/contact" :class="{'is-active': onRoutes === '/contact'}" @click="handleClicked">
             <nuxt-link :to="{ path: '/contact' }">Contact</nuxt-link>
         </el-menu-item>
